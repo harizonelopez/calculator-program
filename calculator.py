@@ -3,12 +3,12 @@
 
 
 def status():
-    a = "+"
-    b = "-"
-    c = "*"
-    d = "/"
+    a = "add"
+    b = "substract"
+    c = "multiply"
+    d = "divide"
     
-    print("\nWhich operation do you wannah do.>a{+}, b{-}, c{*}, d{/}")
+    print("\nWhich operation do you wannah do.> a:{add}, b:{substract}, c:{multiply}, d:{divide}")
 
     operation = input(":) ").lower()
 
