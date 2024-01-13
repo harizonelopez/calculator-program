@@ -1,5 +1,4 @@
-#calculator app
-
+#@Dev_aladinh production
 import tkinter as tk
 from tkinter import ttk
 
@@ -7,7 +6,8 @@ def button_click(symbol):
     current = entry.get()
     entry.delete(0, tk.END)
     entry.insert(0, str(current) + str(symbol))
-    
+
+#clear the entry field
 def button_clear():
     entry.delete(0, tk.END)
     
@@ -20,8 +20,9 @@ def button_equal():
     except Exception as e:
         entry.delete(0, tk.END)
         entry.insert(0, "Syntax Error")
-        
-def exit_app():
+
+#exiting the app
+def close_app():
     root.destroy()
       
 root = tk.Tk()
@@ -55,7 +56,7 @@ for (text, row, col) in buttons:
     button = ttk.Button(root, text=text, command=command, style="TButton")
     button.grid(row=row, column=col, padx=5, pady=5)
 
-exit_button = ttk.Button(root, text='Exit', command=exit_app, style="TButton", cursor="hand2")
+exit_button = ttk.Button(root, text='Exit', command=close_app, style="TButton", cursor="hand2")
 exit_button.grid(row=5, column=3, columnspan=4, padx=5, pady=10)
 
 root.mainloop()
